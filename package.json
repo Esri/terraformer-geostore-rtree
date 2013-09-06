@@ -2,7 +2,7 @@
   "name": "terraformer-rtree",
   "version": "1.0.0",
   "description": "RTree index for Terraformer GeoStore",
-  "main": "terraformer-rtree.js",
+  "main": "terraformer-geostore-rtree.js",
   "scripts": {
     "test": "grunt test"
   },
