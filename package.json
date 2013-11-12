@@ -30,6 +30,7 @@
     "grunt-complexity": "~0.1.3",
     "grunt-template-jasmine-istanbul": "~0.2.5",
     "terraformer": "~1.0.0",
-    "terraformer-geostore": "~1.0.0"
+    "terraformer-geostore": "~1.0.0",
+    "grunt-s3": "~0.2.0-alpha.3"
   }
 }
