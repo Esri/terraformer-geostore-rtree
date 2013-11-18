@@ -1,7 +1,7 @@
 {
   "name": "terraformer-geostore-rtree",
   "version": "1.0.1",
-  "main": "browser/terraformer-geostore-rtree.min.js",
+  "main": "terraformer-geostore-rtree.min.js",
   "ignore"        : ["versions", "spec", "node"],
   "dependencies": {
     "terraformer": "~1.0.0"
