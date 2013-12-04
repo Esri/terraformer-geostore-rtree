@@ -5,8 +5,8 @@ module.exports = function (grunt) {
 
     meta: {
       version: '0.0.1',
-      banner: '/*! Terraformer JS - <%= meta.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
-        '*   https://github.com/geoloqi/Terraformer\n' +
+      banner: '/*! Terraformer GeoStore RTree Index - <%= meta.version %> - <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+        '*   http://terraformer.io\n' +
         '*   Copyright (c) <%= grunt.template.today("yyyy") %> Environmental Systems Research Institute, Inc.\n' +
         '*   Licensed MIT */'
     },
@@ -21,7 +21,8 @@ module.exports = function (grunt) {
 
     uglify: {
       options: {
-        report: 'gzip'
+        report: 'gzip',
+        banner: '<%= meta.banner %>'
       },
 
       "terraformer-geostore-rtree": {
