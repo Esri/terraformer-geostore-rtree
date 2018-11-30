@@ -809,7 +809,7 @@ RTree.Rectangle = function(ix, iy, iw, ih) { // new Rectangle(bounds) or new Rec
  * @static function
  */
 RTree.Rectangle.overlap_rectangle = function(a, b) {
-  return (a.x < (b.x + b.w) && (a.x + a.w) > b.x && a.y < (b.y + b.h) && (a.y + a.h) > b.y);
+  return (a.x <= (b.x + b.w) && (a.x + a.w) >= b.x && a.y <= (b.y + b.h) && (a.y + a.h) >= b.y);
 };
 
 /* returns true if rectangle a is contained in rectangle b
