@@ -113,7 +113,7 @@ var RTree = function (width) {
         var ret_array = [];
         var current_depth = 1;
 
-        if (!rect || !RTree.Rectangle.overlap_rectangle(rect, root)) {
+        if (!rect || !RTree.Rectangle.inclusive_overlap_rectangle(rect, root)) {
           return ret_array;
         }
 
@@ -135,7 +135,7 @@ var RTree = function (width) {
           if ("target" in ret_obj) { // We are searching for a target
             while (i >= 0) {
               var ltree = tree.nodes[i];
-              if (RTree.Rectangle.overlap_rectangle(ret_obj, ltree)) {
+              if (RTree.Rectangle.inclusive_overlap_rectangle(ret_obj, ltree)) {
                 if ((ret_obj.target && "leaf" in ltree && ltree.leaf === ret_obj.target) || (!ret_obj.target && ("leaf" in ltree || RTree.Rectangle.contains_rectangle(ltree, ret_obj)))) { // A Match !!
                   // Yup we found a match...
                   // we can cancel search and start walking up the list
@@ -809,7 +809,15 @@ RTree.Rectangle = function(ix, iy, iw, ih) { // new Rectangle(bounds) or new Rec
  * @static function
  */
 RTree.Rectangle.overlap_rectangle = function(a, b) {
-  return (a.x <= (b.x + b.w) && (a.x + a.w) >= b.x && a.y <= (b.y + b.h) && (a.y + a.h) >= b.y);
+  return (a.x < (b.x + b.w) && (a.x + a.w) > b.x && a.y < (b.y + b.h) && (a.y + a.h) > b.y);
+};
+
+/* returns true if any edges of rectangle 1 overlaps rectangle 2
+ * [ boolean ] = inclusive_overlap_rectangle(rectangle a, rectangle b)
+ * @static function
+ */
+RTree.Rectangle.inclusive_overlap_rectangle = function(a, b) {
+    return (a.x <= (b.x + b.w) && (a.x + a.w) >= b.x && a.y <= (b.y + b.h) && (a.y + a.h) >= b.y);
 };
 
 /* returns true if rectangle a is contained in rectangle b
