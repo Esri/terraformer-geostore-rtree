@@ -1,3 +1,7 @@
+# Important!
+
+This repo is part of the Terraformer project which has been archived. See https://github.com/Esri/terraformer#important for more details.
+
 # Terraformer GeoStore - RTree
 
 This package is part of the [Terraformer](http://terraformer.io) project.
@@ -5,8 +9,6 @@ This package is part of the [Terraformer](http://terraformer.io) project.
 This is an RTree Index for Terraformer.
 
 This Index is based on code originally written by Jon-Carlos Rivera, which can be found under MIT license at https://github.com/imbcmdth/RTree
-
-More information on the Terraformer GeoStore can be found at http://terraformer.io/geostore/
 
 ## Installing
 
@@ -28,12 +30,7 @@ $ bower install terraformer-geostore-rtree
 
 ## Documentation
 
-RTree is designed to be used in conjunction with the Terraformer GeoStore module. Documenation for GeoStore is available at the [Terraformer Website](http://terraformer.io/geostore/).
-
-## Resources
-
-* [Terraformer Website](http://terraformer.io)
-* [twitter@EsriPDX](http://twitter.com/esripdx)
+RTree is designed to be used in conjunction with the Terraformer GeoStore module. Documenation for GeoStore is available at the [Terraformer Website](https://github.com/Esri/terraformer/blob/master/docs/geostore.md).
 
 ## Issues
 
